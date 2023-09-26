@@ -1,0 +1,10 @@
+import torch
+
+USE_CUDA = torch.cuda.is_available()
+OUTPUT_JSON_PATH = "output.json"
+STOP_SIGNAL = "STOP"
+CONFIDENCE_THRESHOLD = 0.5
+MODEL_NAME = "yolov8n.pt"
+MODEL_INPUT_SIZE = 640
+MAX_CONSECUTIVE_FAILURES = 5
+FAILURE_TIMEOUT = 2
