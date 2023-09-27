@@ -8,7 +8,7 @@ from config import OUTPUT_JSON_PATH
 
 def parse_arguments():
     parser = ArgumentParser(description='Process video feed from a given RTSP address')
-    # parser.add_argument('rtsp', type=str, help='RTSP address to process video from') #TODO guy BRING BACK
+    parser.add_argument('rtsp', type=str, help='RTSP address to process video from')
     parser.add_argument('-o', '--output', metavar='', type=str, help='output json path', default=OUTPUT_JSON_PATH)
 
     args = parser.parse_args()
@@ -20,12 +20,11 @@ def parse_arguments():
             print(e)
             sys.exit(1)
 
-    # TODO guy bring back
-    # try:
-    #     is_valid_rtsp_address(args.rtsp)
-    # except ValueError as e:
-    #     print(e)
-    #     sys.exit(1)
+    try:
+        is_valid_rtsp_address(args.rtsp)
+    except ValueError as e:
+        print(e)
+        sys.exit(1)
 
     return args
 
