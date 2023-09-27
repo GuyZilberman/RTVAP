@@ -42,15 +42,12 @@ Example:
 
 To process a video from a specific RTSP address and save the output to a custom directory:
 
-	```
 	python main.py rtsp://example.com/live.sdp -o /path_to_custom_directory/output.json
-	```
+	
 To process a video from a specific RTSP address and save the output to the default directory:
 
-	```
 	python main.py rtsp://example.com/live.sdp
-	```
-	
+
 2. Stopping the Program:
 
 To gracefully terminate the program while it's running, simply press Ctrl+C in the terminal or command prompt. The program will clean up any resources it's using and then exit.
@@ -77,4 +74,3 @@ To gracefully terminate the program while it's running, simply press Ctrl+C in t
 - CUDA Auto-Detection: To harness the acceleration capabilities of GPUs, the pipeline checks for CUDA availability. This allows for faster model inference when a compatible GPU is available.
 - Error Handling and Camera Reconnection: Given the nature of live streams, disconnections can be common. A mechanism has been added to attempt reconnection to the RTSP source in case of disruptions, enhancing the robustness of the pipeline.
 - Keyboard Interrupt for Graceful Termination: To provide a user-friendly way of terminating the program, a keyboard interrupt (Ctrl+C) is implemented. It ensures that all resources, like video streams and threads, are properly closed before exiting.
-
