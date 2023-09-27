@@ -76,7 +76,7 @@ To gracefully terminate the program while it's running, simply press Ctrl+C in t
 - Keyboard Interrupt for Graceful Termination: To provide a user-friendly way of terminating the program, a keyboard interrupt (Ctrl+C) is implemented. It ensures that all resources, like video streams and threads, are properly closed before exiting.
 
 ## Questions & Answers
-1. How would you improve your code to handle multiple stream sources?
+###1. How would you improve your code to handle multiple stream sources?
 - Multithreading/Multiprocessing: Each stream source can be processed in a separate thread or process. 
 Choosing Between Multithreading and Multiprocessing for Model Inference:
 **Multithreading**: If you have a powerful GPU that can handle multiple inferences simultaneously, and the model framework is thread-safe (like PyTorch with CUDA), multithreading can be beneficial. Threads are lightweight, allowing for easier management of video streams. However, if the model and CPU computations become a bottleneck due to Python's Global Interpreter Lock (GIL), this approach might not scale well.
@@ -100,7 +100,7 @@ If multiple threads/processes are writing to the same output, ensure that this o
 - Dynamic Stream Addition/Removal:
 Consider implementing functionality to dynamically add or remove streams without stopping the entire pipeline.
 
-2. Advantage of GPU for inference:
+###2. Advantage of GPU for inference:
 Using a GPU for inference offers several advantages, especially when dealing with tasks that require substantial computational power. Here are 2-3 strong points:
 
 1. **Parallelism**: One of the most significant advantages of GPUs is their inherent ability to handle massive parallelism. A typical GPU consists of thousands of small cores designed for parallel processing, whereas a CPU might only have a few cores optimized for sequential tasks. In the context of inference, especially for deep learning models, this means that the many operations required for each layer of a neural network can be processed concurrently on a GPU, resulting in much faster computations.
@@ -117,7 +117,7 @@ GPUs can offer significant performance benefits where it comes to video decoding
 
 3. **GPU-Accelerated Libraries**: There are specific tools and SDKs, like NVIDIA's Video Codec SDK, that facilitate GPU-accelerated video decoding, streamlining the integration for developers.
 
-3. SDK/Python Package Descriptions:
+###3. SDK/Python Package Descriptions:
     - **asyncio**: Used for asynchronous I/O operations, improving performance in I/O-bound tasks.
     - **GStreamer**: Can handle video decoding and streaming efficiently.
     - **Nvidia DeepStream SDK**: Offers GPU-accelerated video analysis.
