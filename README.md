@@ -118,12 +118,12 @@ GPUs can offer significant performance benefits where it comes to video decoding
 3. **GPU-Accelerated Libraries**: There are specific tools and SDKs, like NVIDIA's Video Codec SDK, that facilitate GPU-accelerated video decoding, streamlining the integration for developers.
 
 ### 3. SDK/Python Package Descriptions:
-    - **asyncio**: Used for asynchronous I/O operations, improving performance in I/O-bound tasks.
-    - **GStreamer**: Can handle video decoding and streaming efficiently.
-    - **Nvidia DeepStream SDK**: Offers GPU-accelerated video analysis.
-    - **Docker**: Provides containerized environments, ensuring compatibility across different systems.
-				  Relevance to my Implementation:
-					Reproducibility: By using Docker, I can ensure that the video analysis pipeline runs consistently across different environments. This is especially relevant if there are specific library dependencies or configurations required.
-					Distribution: A Docker image can encapsulate the entire project, making it easier for users to run without dealing with dependency issues.
-					Isolation: If the video analysis pipeline might interfere with other applications or if there are concerns about library version conflicts, Docker can provide the necessary isolation.
-					
+- **asyncio**: Used for asynchronous I/O operations, improving performance in I/O-bound tasks.
+- **GStreamer**: Can handle video decoding and streaming efficiently.
+- **Nvidia DeepStream SDK**: Offers GPU-accelerated video analysis.
+- **Docker**: Provides containerized environments, ensuring compatibility across different systems.
+			  Relevance to my Implementation:
+				Reproducibility: By using Docker, I can ensure that the video analysis pipeline runs consistently across different environments. This is especially relevant if there are specific library dependencies or configurations required.
+				Distribution: A Docker image can encapsulate the entire project, making it easier for users to run without dealing with dependency issues.
+				Isolation: If the video analysis pipeline might interfere with other applications or if there are concerns about library version conflicts, Docker can provide the necessary isolation.
+				
